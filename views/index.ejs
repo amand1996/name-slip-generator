@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Name Slip Generator</title>
+    <style>
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin:20px;
+    }
+    th, td {
+        text-align: center
+    }
+    </style>
+  </head>
+  <body>
+
+    <strong>This application uses the data from the database (in JSON format) and generates name-slips using Embedded Javascript.</strong>
+    <% for(var i=0; i<data.length; i++) { %>
+      <table style="height: 164.16px; width: 333.12px; float: left;">
+        <tr>
+          <th><%= data[i].FIELD2 %></th>
+        </tr>
+        <tr>
+          <th><%= data[i].FIELD3 %></th>
+        </tr>
+        <tr>
+          <th>BRANCH- <%= data[i].FIELD4 %></th>
+        </tr>
+      </table>
+      <% } %>
+  </body>
+</html>
